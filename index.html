@@ -1,6 +1,386 @@
-<!-- index.html -->
-<!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>Hello World</title></head>
-  <body><h1>It works!</h1></body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akanksha Patnaik - Product Manager & AI Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .header-content h1 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .header-content .subtitle {
+            color: #7f8c8d;
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #34495e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            color: #667eea;
+        }
+
+        .resume-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resume-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .experience-item:last-child, .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .job-title {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .company {
+            color: #667eea;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .duration {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .description {
+            color: #34495e;
+            line-height: 1.7;
+        }
+
+        .description ul {
+            margin-left: 1.2rem;
+        }
+
+        .description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 0.7rem 1rem;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-2px);
+        }
+
+        .hobbies-placeholder {
+            text-align: center;
+            color: #7f8c8d;
+            font-style: italic;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border: 2px dashed #dee2e6;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Akanksha Patnaik</h1>
+                <p class="subtitle">Product Manager - AI Platform | MBA | Digital Transformation Expert</p>
+                
+                <div class="contact-info">
+                    <a href="tel:+919845872362" class="contact-item">
+                        📞 +91 9845872362
+                    </a>
+                    <a href="mailto:akankshap2020@email.iimcal.ac.in" class="contact-item">
+                        ✉️ akankshap2020@email.iimcal.ac.in
+                    </a>
+                    <a href="https://www.linkedin.com/in/akanksha-patnaik-ab9b153a" class="contact-item" target="_blank">
+                        🔗 LinkedIn
+                    </a>
+                    <span class="contact-item">
+                        📍 Bengaluru, India
+                    </span>
+                </div>
+                
+                <a href="https://drive.google.com/file/d/115BVC5lM4O4c6D9K-rsPjLxKZi4RcEPR/view" class="resume-link" target="_blank">
+                    📄 Download Resume
+                </a>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <section class="section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Product Manager - AI Platform</div>
+                    <div class="company">Nanonets Technologies, Bengaluru, India</div>
+                    <div class="duration">March 2023 - Present</div>
+                    <div class="description">
+                        <ul>
+                            <li><strong>End-to-End Product Ownership:</strong> Led the development of AI based document processing product roadmaps leveraging LLMs, GPT APIs and custom trained NLP models for 70+ customers, increasing ARR by USD 1.5M.</li>
+                            <li><strong>Product Growth & Metrics Optimization:</strong> Led AI-driven product initiatives, boosting client conversion from 60% to 70% for B2B and SMB clients and reducing onboarding time by 50%, thus improving self-serve adoption for customers from account payable, financial statement, ID verification and legal document processing.</li>
+                            <li><strong>Cloud AI Deployment & Observability:</strong> Worked with engineering teams to optimize AI models for deployment on cloud environments, ensuring scalability, reliability, and performance monitoring. Established key model performance KPIs and enabled real-time monitoring tools to track failure rates, and inference latency.</li>
+                            <li><strong>User Research:</strong> Directed over 100+ client interviews and engaged with relevant stakeholders to gather business requirements. Defined metrics and set up analytics against customer goals.</li>
+                            <li><strong>AI Model Monitoring & Feedback Loops:</strong> Established data pipelines for continuous AI model retraining using real-time customer feedback, improving accuracy.</li>
+                            <li><strong>API & Platform Enhancements:</strong> Enabled integration with CRMs (Salesforce, Netsuite, Serve Manager, Timbersmart). Enabled discovery and roadmap creation for API-driven solutions for high-value enterprise customers (worth USD 300K+)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Management Consultant, Banking FS</div>
+                    <div class="company">Accenture Strategy, Bengaluru, India</div>
+                    <div class="duration">August 2020 - March 2023</div>
+                    <div class="description">
+                        <ul>
+                            <li><strong>Product Management, Channels - Large ME Bank:</strong> Owned the product roadmap and led the design and agile delivery of digital transformation initiatives for the bank's retail products in for digital lending: Loans, Credit and Debit Cards, White label, VAS. This lead to <strong>89% active digital users</strong></li>
+                            <li><strong>Project Management, Post Merger IT Integration - Egyptian Bank:</strong> Project management consultant for post-merger integration across retail, wholesale, channels, payments and enterprise functions</li>
+                            <li><strong>Digital Bank Model Strategy - Thailand:</strong> Conducted interviews with C-level executives from over 30 prominent banks and fintech institutions, undertaking research investment analysis for an international financial institution. Generated a thorough report on the neo-banking landscape in Thailand and crafted a strategic go-to-market plan and revenue models in lending strategies worth USD 10 Mn in response to the central bank's digital bank license announcement.</li>
+                            <li><strong>GTM Strategy and Value Realisation Framework:</strong> Developed the North America go-to-market (GTM) strategy based on data driven analysis of opportunities pipeline. Also curated points of view (PoVs) and business cases for value realisation on several banking topics, including trade finance, payments, liquidity management, digital wallets, thus optimizing payment processing speed and user experience.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">FPGA Design Engineer</div>
+                    <div class="company">Infinera India Pvt. Ltd, Bengaluru India</div>
+                    <div class="duration">August 2017 - June 2018</div>
+                    <div class="description">
+                        <ul>
+                            <li>Implemented and maintained the power and voltage control module for Optical Transport Network Tributary Model</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Member of Technical Staff</div>
+                    <div class="company">Oracle India Pvt. Ltd, Bengaluru India</div>
+                    <div class="duration">July 2016 - August 2017</div>
+                    <div class="description">
+                        <ul>
+                            <li>Maintained the zero downtime upgrade tool for Exadata (Oracle Database) on SAAS and PAAS platforms</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <div class="job-title">Master of Business Administration (MBA)</div>
+                    <div class="company">Indian Institute of Management (IIM), Calcutta</div>
+                    <div class="duration">June 2018 - March 2020</div>
+                    <div class="description">CGPA: 7.2/9</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-title">B.E EEE, M.Sc Physics (Dual Degree)</div>
+                    <div class="company">BITS Pilani Goa Campus</div>
+                    <div class="duration">July 2011 - July 2016</div>
+                    <div class="description">CGPA: 8.1/10</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">Business Analysis</div>
+                    <div class="skill-tag">Data Analytics</div>
+                    <div class="skill-tag">Digital Transformation</div>
+                    <div class="skill-tag">Product Management</div>
+                    <div class="skill-tag">A/B Testing</div>
+                    <div class="skill-tag">Certified Scrum Master</div>
+                    <div class="skill-tag">Artificial Intelligence</div>
+                    <div class="skill-tag">Strategy</div>
+                    <div class="skill-tag">Jira</div>
+                    <div class="skill-tag">REST APIs</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Postman</div>
+                    <div class="skill-tag">Power BI</div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Leadership & Internships</h2>
+                
+                <div class="experience-item">
+                    <div class="job-title">Head, Department of Media, Technical fest, Quark 2014</div>
+                    <div class="company">BITS Pilani Goa</div>
+                    <div class="duration">March 2013 - February 2014</div>
+                    <div class="description">
+                        Led a 10-person team to raise media visibility and outreach for a festival, securing partnerships with 25+ national and local media firms. Conceptualised CSR campaign to promote voluntary blood donation
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Management Intern</div>
+                    <div class="company">NeoStove B.V, Delft, Netherlands</div>
+                    <div class="duration">June 2020 - July 2020</div>
+                    <div class="description">
+                        <ul>
+                            <li>Market research and segmentation for Indian and Netherlands markets, leading user research and demand forecasting from hotel and catering industry in India</li>
+                            <li>Created user journeys and acquisition strategies for the identified segments</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Management Consulting Intern</div>
+                    <div class="company">Accenture Strategy, Bengaluru India</div>
+                    <div class="duration">April 2019 - May 2019</div>
+                    <div class="description">
+                        <ul>
+                            <li>Built LSTM-based deep learning model (RNN Algorithm) in Python and Excel for client status prediction in the KYC process of 60+ steps to aid resource optimisation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Hobbies & Interests</h2>
+                <div class="hobbies-placeholder">
+                    <p>This section will be updated with personal interests and hobbies.</p>
+                    <p>Stay tuned for more details about activities outside of work!</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
 </html>
